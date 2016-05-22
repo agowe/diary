@@ -1,0 +1,11 @@
+<%= form_for(@entry) do |form| %>
+<% if @entry.errors.message %>
+  <p><%= @entry.errors.messages %></p>
+<% end %>
+  <p><%= form.label("title") %></p>
+  <p><%= form.text_field("title") %></p>
+  <p><%= form.label("contents") %></p>
+  <p><%= form.text_area("contents") %></p>
+  <p><%= form.submit %></p>
+<% end %>
+<p><%= link_to("Back to all entries", entries_path) %></p>
